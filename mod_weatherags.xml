@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2023 Weather. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>WeatherAgs</name>
+	<author>alvin gil saldaña </author>
+	<creationDate>September 2023</creationDate>
+	<copyright>Copyright (c) 2023 Weather. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>alvin_gil@hotmail.com</authorEmail>
+	<authorUrl>https://github.com/alvinalvin</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_weatherags">mod_weatherags.php</filename>
+
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_weatherags.ini</language>
+		<language tag="en-GB">en-GB.mod_weatherags.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			      <field
+				 name="idcity"
+				 type="text"
+				 label="ID  city" description=""
+			      />
+			     <field
+	 		         name="key"
+	 			 type="text"
+	 		         label=" Api key" description=""
+	 		      />
+
+			     <field name="units" type="list" default="" label="units" description="">
+                                 <option value="0">celcius</option>
+                                 <option value="1">fahrenheits</option>
+                                 </field>
+			        
+			      <field
+  	 		           name="color"
+  	 		           type="color"
+			           default="#94A684"
+  	 		           label=" background color" description=""
+  	 		       />
+				
+				<field
+   	 			     name="colorfont"
+   	 			     type="color"
+				     default="#FFEEF4"
+   	 			     label=" font color" description=""
+   	 		        />
+
+
+  
+
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
